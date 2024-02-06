@@ -1,0 +1,15 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="SSBasedInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <replaceConfiguration name="merge if" text="if ($Condition1$) {&#10;    $Statements1$&#10;}&#10;if ($Condition2$) {&#10;    $Statements2$&#10;}" recursive="false" caseInsensitive="false" type="Kotlin" pattern_context="default" reformatAccordingToStyle="true" shortenFQN="false" replacement="if ($Condition1$ || $Condition2$) {&#10;    $Statements1$&#10;}">
+        <constraint name="__context__" within="" contains="" />
+        <constraint name="Condition2" within="" contains="" />
+        <constraint name="Condition1" within="" contains="" />
+        <constraint name="Statements2" script="&quot;Statements2.text == Statements1.text&quot;" within="" contains="" />
+        <constraint name="Statements1" minCount="0" maxCount="2147483647" within="" contains="" />
+      </replaceConfiguration>
+    </inspection_tool>
+    <inspection_tool class="f401b3bb-7c8e-36dd-94e2-762ba2ac432a" enabled="true" level="WEAK WARNING" enabled_by_default="true" editorAttributes="INFO_ATTRIBUTES" />
+  </profile>
+</component>
