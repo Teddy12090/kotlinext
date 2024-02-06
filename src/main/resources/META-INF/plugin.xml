@@ -21,10 +21,20 @@
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
+    <depends>org.jetbrains.kotlin</depends>
 
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
 
+        <localInspection
+                language="kotlin"
+                level="WARNING"
+                enabledByDefault="true"
+                key="inspection.merge.same.if.display.name"
+                bundle="messages"
+                groupName="KtInspection"
+                implementationClass="idv.teddy.ktinspection.inspection.MergeSameIfInspection"
+        />
     </extensions>
 </idea-plugin>
