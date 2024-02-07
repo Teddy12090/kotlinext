@@ -24,8 +24,6 @@ jobs:
       - name: Create Release
         uses: google-github-actions/release-please-action@v4
         id: release
-        with:
-          release-type: draft
       - name: Upload Release Artifact
         if: ${{ steps.release.outputs.release_created }}
         env:
