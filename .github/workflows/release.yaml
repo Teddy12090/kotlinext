@@ -24,6 +24,7 @@ jobs:
           artifacts: "build/distributions/*.zip"
           draft: true
           allowUpdates: true
+          tag: draft
 
 
 
