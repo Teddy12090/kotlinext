@@ -6,19 +6,27 @@ on:
 name: Create Release
 
 jobs:
+  permissions:
+    contents: write
+    pull-requests: write
   create-release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Get current date
-        id: date
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: 17
+      - name: build
+        run: ./gradlew build
       - name: Create Release
-        uses: actions/create-release@v1
+        uses: google-github-actions/release-please-action@v4
+        id: release
+        with:
+          release-type: draft
+      - name: Upload Release Artifact
+        if: ${{ steps.release.outputs.release_created }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          release_name: Release ${{ steps.date.outputs.date }}
-          draft: true
-          prerelease: true
+        run: gh release upload ${{ steps.release.outputs.tag_name }} build/distributions/*.zip
