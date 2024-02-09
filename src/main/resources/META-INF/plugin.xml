@@ -46,5 +46,16 @@
                 groupPath="Kotlin"
                 implementationClass="idv.teddy.ktinspection.inspection.MoveToFieldInspection"
             />
+
+        <localInspection
+                language="kotlin"
+                level="WARNING"
+                enabledByDefault="true"
+                displayName="Replace with loop"
+                groupName="KtInspection"
+                groupPath="Kotlin"
+                implementationClass="idv.teddy.ktinspection.inspection.ReplaceWithLoopInspection"
+        />
+
     </extensions>
 </idea-plugin>

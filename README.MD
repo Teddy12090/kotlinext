@@ -32,3 +32,19 @@
    fun foo() {
    }
    ```
+
+3. quick fix: **replace with loop**
+
+   ```kotlin
+   plus()
+   plus()
+   plus()
+   ```
+   
+   to
+   
+   ```kotlin
+   for(i in 1..3) {
+     plus()
+   }
+   ``` 
