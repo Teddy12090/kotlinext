@@ -7,6 +7,7 @@ import org.jetbrains.kotlin.idea.codeinsight.api.classic.inspections.AbstractKot
 import org.jetbrains.kotlin.idea.intentions.loopToCallChain.nextStatement
 import org.jetbrains.kotlin.psi.KtIfExpression
 import org.jetbrains.kotlin.psi.ifExpressionVisitor
+import org.jetbrains.kotlin.psi.psiUtil.createSmartPointer
 import org.jetbrains.uast.kotlin.unwrapBlockOrParenthesis
 
 class MergeSameIfInspection : AbstractKotlinInspection() {
@@ -22,7 +23,7 @@ class MergeSameIfInspection : AbstractKotlinInspection() {
                     val nextIfBody = nextStatement.then?.unwrapBlockOrParenthesis()?.text
                     val currentIfBody = block.then?.unwrapBlockOrParenthesis()?.text
                     if (nextIfBody == currentIfBody) {
-                        holder.registerProblem(block, "Merge same if", MergeSameIfQuickFix(block, nextStatement))
+                        holder.registerProblem(block, "Merge same if", MergeSameIfQuickFix(block.createSmartPointer(), nextStatement.createSmartPointer()))
                     }
                 }
             }
