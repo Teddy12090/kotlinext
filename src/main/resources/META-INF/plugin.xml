@@ -24,6 +24,8 @@
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
 
+        <!-- https://github.com/JetBrains/intellij-sdk-code-samples/blob/main/comparing_string_references_inspection/src/main/resources/META-INF/plugin.xml -->
+
         <localInspection
                 language="kotlin"
                 level="WEAK WARNING"
@@ -34,5 +36,15 @@
                 groupPath="Kotlin"
                 implementationClass="idv.teddy.ktinspection.inspection.MergeSameIfInspection"
         />
+
+        <localInspection
+                language="kotlin"
+                level="TEXT ATTRIBUTES"
+                enabledByDefault="true"
+                displayName="Move to field"
+                groupName="KtInspection"
+                groupPath="Kotlin"
+                implementationClass="idv.teddy.ktinspection.inspection.MoveToFieldInspection"
+            />
     </extensions>
 </idea-plugin>
