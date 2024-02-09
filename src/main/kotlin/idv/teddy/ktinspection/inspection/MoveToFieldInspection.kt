@@ -5,6 +5,7 @@ import com.intellij.psi.PsiElementVisitor
 import idv.teddy.ktinspection.quickfix.MoveToFieldQuickFix
 import org.jetbrains.kotlin.idea.codeinsight.api.classic.inspections.AbstractKotlinInspection
 import org.jetbrains.kotlin.psi.propertyVisitor
+import org.jetbrains.kotlin.psi.psiUtil.createSmartPointer
 
 class MoveToFieldInspection : AbstractKotlinInspection() {
     override fun buildVisitor(
@@ -15,7 +16,7 @@ class MoveToFieldInspection : AbstractKotlinInspection() {
         return propertyVisitor { block ->
             run {
                 if (block.isLocal) {
-                    holder.registerProblem(block, "Move to field", MoveToFieldQuickFix(block))
+                    holder.registerProblem(block, "Move to field", MoveToFieldQuickFix(block.createSmartPointer()))
                 }
             }
         }

@@ -27,7 +27,7 @@
    ```
    to
     ```kotlin
-   val greeting = "Hello world!"
+   private val greeting = "Hello world!"
    
    fun foo() {
    }
