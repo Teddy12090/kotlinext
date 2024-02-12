@@ -45,7 +45,7 @@
                 groupName="KtInspection"
                 groupPath="Kotlin"
                 implementationClass="idv.teddy.ktinspection.inspection.MoveToFieldInspection"
-            />
+        />
 
         <localInspection
                 language="kotlin"
@@ -56,6 +56,12 @@
                 groupPath="Kotlin"
                 implementationClass="idv.teddy.ktinspection.inspection.ReplaceWithLoopInspection"
         />
+
+        <intentionAction>
+            <language>kotlin</language>
+            <className>idv.teddy.ktinspection.intention.FlipArgumentsIntention</className>
+            <category>Kotlin</category>
+        </intentionAction>
 
     </extensions>
 </idea-plugin>
