@@ -1,0 +1,5 @@
+class Foo {
+    <spot>val blabla = 0</spot>
+    fun foo() {
+    }
+}

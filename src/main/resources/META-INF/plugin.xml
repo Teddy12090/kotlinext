@@ -39,16 +39,6 @@
 
         <localInspection
                 language="kotlin"
-                level="TEXT ATTRIBUTES"
-                enabledByDefault="true"
-                displayName="Move to field"
-                groupName="Kotlin ext"
-                groupPath="Kotlin"
-                implementationClass="idv.teddy.kotlin.ext.inspection.MoveToFieldInspection"
-        />
-
-        <localInspection
-                language="kotlin"
                 level="WARNING"
                 enabledByDefault="true"
                 displayName="Replace with loop"
@@ -60,6 +50,12 @@
         <intentionAction>
             <language>kotlin</language>
             <className>idv.teddy.kotlin.ext.intention.FlipArgumentsIntention</className>
+            <category>Kotlin</category>
+        </intentionAction>
+
+        <intentionAction>
+            <language>kotlin</language>
+            <className>idv.teddy.kotlin.ext.intention.MoveToPropertyIntention</className>
             <category>Kotlin</category>
         </intentionAction>
 

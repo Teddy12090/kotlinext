@@ -1,7 +1,41 @@
+# Kotlin Ext
+
+JetBrains Kotlin extension makes coding in Kotlin more enjoyable.
 
 # Features
 
-1. quick fix: **merge same if**
+## Intention
+
+1. Flip common
+ 
+   ```kotlin
+   foo(a, b)
+   ```
+   
+   to
+ 
+   ```kotlin
+   foo(b, a)
+   ```
+
+2. move to property
+
+    ```kotlin
+   fun foo() {
+        val greeting = "Hello world!"
+   }
+   ```
+   to
+    ```kotlin
+   private val greeting = "Hello world!"
+   
+   fun foo() {
+   }
+   ```
+
+## Quick fix
+
+1. merge same if
     
    ```kotlin
     if (condition1) {
@@ -17,23 +51,8 @@
         doSomething()
    }
    ```
-   
-2. quick fix: **move to field**
 
-    ```kotlin
-   fun foo() {
-        val greeting = "Hello world!"
-   }
-   ```
-   to
-    ```kotlin
-   private val greeting = "Hello world!"
-   
-   fun foo() {
-   }
-   ```
-
-3. quick fix: **replace with loop**
+2. replace with loop
 
    ```kotlin
    plus()
