@@ -1,4 +1,4 @@
-package idv.teddy.ktinspection.intention
+package idv.teddy.kotlin.ext.intention
 
 import com.intellij.codeInsight.intention.IntentionAction
 import com.intellij.codeInsight.intention.PsiElementBaseIntentionAction

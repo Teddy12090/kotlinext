@@ -1,8 +1,8 @@
-package idv.teddy.ktinspection.inspection
+package idv.teddy.kotlin.ext.inspection
 
 import com.intellij.codeInspection.ProblemsHolder
 import com.intellij.psi.PsiElementVisitor
-import idv.teddy.ktinspection.quickfix.MergeSameIfQuickFix
+import idv.teddy.kotlin.ext.quickfix.MergeSameIfQuickFix
 import org.jetbrains.kotlin.idea.codeinsight.api.classic.inspections.AbstractKotlinInspection
 import org.jetbrains.kotlin.idea.intentions.loopToCallChain.nextStatement
 import org.jetbrains.kotlin.psi.KtIfExpression

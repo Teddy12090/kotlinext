@@ -5,4 +5,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = "ktinspection"
+rootProject.name = "kotlinext"

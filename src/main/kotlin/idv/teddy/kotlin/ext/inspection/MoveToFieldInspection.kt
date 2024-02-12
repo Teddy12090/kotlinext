@@ -1,8 +1,8 @@
-package idv.teddy.ktinspection.inspection
+package idv.teddy.kotlin.ext.inspection
 
 import com.intellij.codeInspection.ProblemsHolder
 import com.intellij.psi.PsiElementVisitor
-import idv.teddy.ktinspection.quickfix.MoveToFieldQuickFix
+import idv.teddy.kotlin.ext.quickfix.MoveToFieldQuickFix
 import org.jetbrains.kotlin.idea.codeinsight.api.classic.inspections.AbstractKotlinInspection
 import org.jetbrains.kotlin.psi.propertyVisitor
 import org.jetbrains.kotlin.psi.psiUtil.createSmartPointer
@@ -12,7 +12,6 @@ class MoveToFieldInspection : AbstractKotlinInspection() {
         holder: ProblemsHolder,
         isOnTheFly: Boolean,
     ): PsiElementVisitor {
-        var a = 0
         return propertyVisitor { block ->
             run {
                 if (block.isLocal) {

@@ -1,4 +1,4 @@
-package idv.teddy.ktinspection.quickfix
+package idv.teddy.kotlin.ext.quickfix
 
 import com.intellij.codeInspection.LocalQuickFix
 import com.intellij.codeInspection.ProblemDescriptor

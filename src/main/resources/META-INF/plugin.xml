@@ -1,11 +1,11 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
-    <id>idv.teddy.ktinspection</id>
+    <id>idv.teddy.kotlinext</id>
 
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
-    <name>Ktinspection</name>
+    <name>Kotlin Ext</name>
 
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
     <vendor email="teddy12090@gmail.com" url="http://github.com/teddy12090">Teddy Lee</vendor>
@@ -32,9 +32,9 @@
                 enabledByDefault="true"
                 key="inspection.merge.same.if.display.name"
                 bundle="messages"
-                groupName="KtInspection"
+                groupName="Kotlin ext"
                 groupPath="Kotlin"
-                implementationClass="idv.teddy.ktinspection.inspection.MergeSameIfInspection"
+                implementationClass="idv.teddy.kotlin.ext.inspection.MergeSameIfInspection"
         />
 
         <localInspection
@@ -42,9 +42,9 @@
                 level="TEXT ATTRIBUTES"
                 enabledByDefault="true"
                 displayName="Move to field"
-                groupName="KtInspection"
+                groupName="Kotlin ext"
                 groupPath="Kotlin"
-                implementationClass="idv.teddy.ktinspection.inspection.MoveToFieldInspection"
+                implementationClass="idv.teddy.kotlin.ext.inspection.MoveToFieldInspection"
         />
 
         <localInspection
@@ -52,14 +52,14 @@
                 level="WARNING"
                 enabledByDefault="true"
                 displayName="Replace with loop"
-                groupName="KtInspection"
+                groupName="Kotlin ext"
                 groupPath="Kotlin"
-                implementationClass="idv.teddy.ktinspection.inspection.ReplaceWithLoopInspection"
+                implementationClass="idv.teddy.kotlin.ext.inspection.ReplaceWithLoopInspection"
         />
 
         <intentionAction>
             <language>kotlin</language>
-            <className>idv.teddy.ktinspection.intention.FlipArgumentsIntention</className>
+            <className>idv.teddy.kotlin.ext.intention.FlipArgumentsIntention</className>
             <category>Kotlin</category>
         </intentionAction>
 
